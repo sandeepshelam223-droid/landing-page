@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Landing Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: transparent;
+            padding: 15px;
+            transition: 0.3s;
+        }
+
+        nav.scrolled {
+            background: black;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            margin: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: yellow;
+        }
+
+        .content {
+            height: 2000px;
+            background: linear-gradient(blue, purple);
+            color: white;
+            padding-top: 100px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+<nav id="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="content">
+    <h1>Welcome</h1>
+    <p>Scroll down to see effect</p>
+</section>
+
+<script>
+    window.addEventListener("scroll", function() {
+        let navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+</script>
+
+</body>
+</html>
